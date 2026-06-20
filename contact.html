@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Regal Box</title>
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind Play CDN for pristine instant styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-b from-[#060F25] to-slate-950 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-[#4583F8] selection:text-white">
+
+  <!-- Header Section -->
+  <header class="border-b border-slate-800/80 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center space-x-3 group text-decoration-none">
+        <div class="w-10 h-10 bg-gradient-to-tr from-[#1A4B9F] to-[#4583F8] rounded-xl flex items-center justify-center border border-[#4381F4] shadow-[0_0_10px_rgba(69,131,248,0.3)] group-hover:scale-105 transition-all duration-300">
+          <svg class="w-5.5 h-5.5 text-yellow-100 stroke-yellow-100 fill-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z" />
+            <path d="M5 20h14" />
+          </svg>
+        </div>
+        <span class="font-heading text-lg font-bold text-white tracking-widest uppercase">
+          REGAL <span class="text-[#4583F8]">BOX</span>
+        </span>
+      </a>
+      <a href="/" class="text-xs font-mono text-slate-400 hover:text-white transition-colors flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-lg border border-white/5 hover:border-white/10">
+        <span>&larr;</span> Back to Home
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 w-full max-w-4xl mx-auto px-6 py-12 md:py-16">
+    <div class="container relative">
+      
+      <!-- Ambient light effect -->
+      <div class="absolute -top-32 -left-32 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <!-- Premium Header Alignment -->
+      <div class="text-center mb-10 relative z-10">
+        <h1 class="font-heading text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+          Need help? Contact Us
+        </h1>
+        <p class="text-sm font-mono text-slate-400 mt-3 uppercase tracking-widest">Global Gifting Concierge & Support Hub</p>
+      </div>
+
+      <!-- Contact Form Card styled to look highly-polished based on wireframe outline -->
+      <div class="bg-slate-900/40 border border-slate-850 rounded-2xl p-8 md:p-10 shadow-2xl relative overflow-hidden backdrop-blur-sm z-10">
+        <form id="contactForm" class="space-y-6" onsubmit="handleContactSubmit(event)">
+          
+          <!-- First & Last Name side-by-side -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label for="firstName" class="block text-sm font-medium text-slate-300">First Name</label>
+              <input 
+                type="text" 
+                id="firstName" 
+                required
+                placeholder="Augustus"
+                class="w-full bg-slate-950/60 border border-slate-800 rounded-lg py-2.5 px-4 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-[#4583F8] focus:ring-1 focus:ring-[#4583F8] transition-all"
+              />
+            </div>
+            <div class="space-y-2">
+              <label for="lastName" class="block text-sm font-medium text-slate-300">Last Name</label>
+              <input 
+                type="text" 
+                id="lastName" 
+                required
+                placeholder="Regal"
+                class="w-full bg-slate-950/60 border border-slate-800 rounded-lg py-2.5 px-4 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-[#4583F8] focus:ring-1 focus:ring-[#4583F8] transition-all"
+              />
+            </div>
+          </div>
+
+          <!-- Email Field -->
+          <div class="space-y-2">
+            <label for="email" class="block text-sm font-medium text-slate-300">Email Address</label>
+            <input 
+              type="email" 
+              id="email" 
+              required
+              placeholder="augustus@regalbox.com"
+              class="w-full bg-slate-950/60 border border-slate-800 rounded-lg py-2.5 px-4 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-[#4583F8] focus:ring-1 focus:ring-[#4583F8] transition-all"
+            />
+          </div>
+
+          <!-- Message Field -->
+          <div class="space-y-2">
+            <label for="message" class="block text-sm font-medium text-slate-300">Message</label>
+            <textarea 
+              id="message" 
+              rows="5" 
+              required
+              placeholder="Inscribe your inquiry, custom order request, or collaboration notes here..."
+              class="w-full bg-slate-950/60 border border-slate-800 rounded-lg py-2.5 px-4 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-[#4583F8] focus:ring-1 focus:ring-[#4583F8] transition-all resize-none"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button Centered -->
+          <div class="flex justify-center pt-4">
+            <button 
+              type="submit"
+              class="cursor-pointer bg-gradient-to-r from-[#1A4B9F] to-[#4583F8] hover:from-[#4583F8] hover:to-[#1A4B9F] text-white font-semibold py-3 px-10 rounded-xl border border-[#4381F4] shadow-[0_0_15px_rgba(69,131,248,0.35)] transition-all duration-300 hover:scale-[1.02]"
+            >
+              Submit Inquiry
+            </button>
+          </div>
+        </form>
+
+        <!-- Dynamic Success Banner -->
+        <div id="successBanner" class="hidden text-center py-8 space-y-4">
+          <div class="w-16 h-16 bg-[#4583F8]/10 border border-[#4583F8]/30 rounded-full flex items-center justify-center mx-auto text-[#4583F8] animate-bounce">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-white">Inquiry Transmitted</h3>
+          <p class="text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
+            Thank you for reaching out to <strong class="text-white">Regal Box</strong>. Our white-glove support team has received your message and will secure an elegant response in your inbox within 12-24 hours.
+          </p>
+          <button 
+            onclick="resetForm()" 
+            class="mt-4 text-xs font-mono text-[#4583F8] hover:text-white underline cursor-pointer"
+          >
+            Send another inquiry
+          </button>
+        </div>
+      </div>
+
+      <!-- Figma Dots Grid Decorative element -->
+      <div class="flex justify-center mt-6 select-none opacity-40">
+        <svg class="w-72 h-12 text-slate-600" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 40">
+          <pattern id="dotPattern" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.5" class="fill-slate-600" />
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#dotPattern)" />
+        </svg>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Wireframe Detailed Footer Footer -->
+  <footer class="border-t border-slate-900 bg-slate-950 pt-12 pb-8 text-sm text-slate-400">
+    <div class="max-w-4xl mx-auto px-6">
+      
+      <!-- Footer grid mimicking the figma layout strictly -->
+      <div class="grid grid-cols-2 md:grid-cols-2 gap-8 pb-8">
+        
+        <!-- Quick Links Column -->
+        <div class="space-y-4">
+          <h3 class="text-white font-heading font-extrabold text-sm tracking-wide">Quick Links</h3>
+          <ul class="space-y-2.5 text-xs">
+            <li>
+              <a href="/contact.html" class="hover:text-white transition-all text-[#4583F8] font-medium flex items-center gap-1.5">
+                <span>&bull;</span> Contact Us
+              </a>
+            </li>
+            <li>
+              <a href="/" class="hover:text-white transition-all">
+                Home
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- All Policies Column -->
+        <div class="space-y-4">
+          <h3 class="text-white font-heading font-extrabold text-sm tracking-wide">All Policies</h3>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li>
+              <a href="/privacy.html" class="hover:text-[#4583F8] transition-all">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="/shipping.html" class="hover:text-[#4583F8] transition-all">Shipping Policy</a>
+            </li>
+            <li>
+              <span class="text-slate-600 cursor-not-allowed" title="Returns offline">Return Policy</span>
+            </li>
+            <li>
+              <span class="text-slate-600 cursor-not-allowed" title="Terms offline">Terms of Service</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Horizontal Divider -->
+      <div class="border-t border-slate-900 pt-6 flex justify-between items-center text-xs font-mono text-slate-500">
+        <div>
+          &copy; REGAL BOX 2026
+        </div>
+        <div class="text-[10px] text-slate-600">
+          Adorned in Majestic Aesthetics
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      
+      // Select fields and banner
+      const form = document.getElementById('contactForm');
+      const banner = document.getElementById('successBanner');
+      
+      if (form && banner) {
+        // Fade out form and exhibit banner
+        form.classList.add('hidden');
+        banner.classList.remove('hidden');
+      }
+    }
+
+    function resetForm() {
+      const form = document.getElementById('contactForm');
+      const banner = document.getElementById('successBanner');
+      
+      if (form && banner) {
+        form.reset();
+        banner.classList.add('hidden');
+        form.classList.remove('hidden');
+      }
+    }
+  </script>
+
+</body>
+</html>

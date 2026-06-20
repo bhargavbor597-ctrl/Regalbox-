@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shipping Policy - Regal Box</title>
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind Play CDN for pristine instant styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-b from-[#060F25] to-slate-950 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-[#4583F8] selection:text-white">
+
+  <!-- Header Section -->
+  <header class="border-b border-slate-800/80 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="/" class="flex items-center space-x-3 group text-decoration-none">
+        <div class="w-10 h-10 bg-gradient-to-tr from-[#1A4B9F] to-[#4583F8] rounded-xl flex items-center justify-center border border-[#4381F4] shadow-[0_0_10px_rgba(69,131,248,0.3)] group-hover:scale-105 transition-all duration-300">
+          <svg class="w-5.5 h-5.5 text-yellow-100 stroke-yellow-100 fill-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z" />
+            <path d="M5 20h14" />
+          </svg>
+        </div>
+        <span class="font-heading text-lg font-bold text-white tracking-widest uppercase">
+          REGAL <span class="text-[#4583F8]">BOX</span>
+        </span>
+      </a>
+      <a href="/" class="text-xs font-mono text-slate-400 hover:text-white transition-colors flex items-center gap-1.5 bg-white/5 px-3 py-1.5 rounded-lg border border-white/5 hover:border-white/10">
+        <span>&larr;</span> Back to Home
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content Container matching requested class "container" -->
+  <main class="flex-1 w-full max-w-4xl mx-auto px-6 py-12 md:py-20">
+    <div class="container bg-slate-900/40 border border-slate-850 rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden backdrop-blur-sm">
+      
+      <!-- Ambient light effect -->
+      <div class="absolute -top-32 -left-32 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <!-- Shipping Heading -->
+      <div class="border-b border-slate-800/80 pb-6 mb-8 relative z-10">
+        <h1 class="font-heading text-3xl md:text-4xl font-extrabold text-white tracking-tight flex items-center gap-3">
+          Shipping Policy
+        </h1>
+        <p class="text-xs font-mono text-slate-400 mt-2 uppercase tracking-widest">Global Gifting Logistics</p>
+      </div>
+
+      <!-- Legal Content -->
+      <div class="space-y-8 text-slate-300 leading-relaxed relative z-10 font-sans">
+        
+        <p class="text-slate-200 text-lg font-light leading-relaxed">
+          Regal Box ships products worldwide from Mumbai, India.
+        </p>
+
+        <section class="space-y-3">
+          <h2 class="font-heading text-xl font-bold text-white tracking-normal flex items-center gap-2">
+            <span class="w-1.5 h-6 rounded bg-[#4583F8] inline-block"></span>
+            Processing Time
+          </h2>
+          <p class="text-sm md:text-base text-slate-300">
+            Orders are processed within 1–2 business days.
+          </p>
+        </section>
+
+        <section class="space-y-3">
+          <h2 class="font-heading text-xl font-bold text-white tracking-normal flex items-center gap-2">
+            <span class="w-1.5 h-6 rounded bg-[#4583F8] inline-block"></span>
+            Delivery Time
+          </h2>
+          <p class="text-sm md:text-base text-slate-300">
+            Shipping usually takes 5–7 business days depending on location.
+          </p>
+        </section>
+
+        <section class="space-y-3">
+          <h2 class="font-heading text-xl font-bold text-white tracking-normal flex items-center gap-2">
+            <span class="w-1.5 h-6 rounded bg-[#4583F8] inline-block"></span>
+            International Shipping
+          </h2>
+          <p class="text-sm md:text-base text-slate-300">
+            International delivery times may vary based on customs and local shipping services.
+          </p>
+        </section>
+
+        <section class="space-y-3">
+          <h2 class="font-heading text-xl font-bold text-white tracking-normal flex items-center gap-2">
+            <span class="w-1.5 h-6 rounded bg-[#4583F8] inline-block"></span>
+            Order Tracking
+          </h2>
+          <p class="text-sm md:text-base text-slate-300">
+            Customers will receive tracking details after order confirmation.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-900 bg-slate-950 py-6 text-center text-xs text-slate-500 font-mono">
+    &copy; 2026 REGAL BOX ENTERPRISES. Adorned in Majestic Aesthetics. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
